@@ -1,12 +1,16 @@
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import { theme } from '@/theme';
+import { JokesScreen } from '@/components/JokesScreen';
 
-function App() {
-  console.log('test');
-
+export default function App() {
   return (
-    <>
-      <div>React App</div>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth="xl" sx={{ py: { xs: 2, sm: 4 }, px: { xs: 2, sm: 3 } }}>
+        <JokesScreen />
+      </Container>
+    </ThemeProvider>
+  );
 }
-
-export default App

@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Yarn Berry — keep .yarnrc.yml, yarn.lock, .pnp.*, and listed .yarn/* dirs
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +30,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Yarn Berry — keep these committed:
+#   .yarnrc.yml, yarn.lock, .pnp.*, .yarn/{releases,plugins,patches,sdks}/
+# But ignore the regenerated cache state:
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/patches
+!.yarn/sdks
+!.yarn/versions
